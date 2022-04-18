@@ -2,6 +2,7 @@ const Module = require('../packages/module/module')
 const express = require('express')
 
 const AppRoutes = require('../routes')
+const { PrismaClient } = require('@prisma/client')
 
 class RouterModule extends Module {
   constructor() {
@@ -9,8 +10,9 @@ class RouterModule extends Module {
   }
   /**
    * @param {express.Express} app
+   * @param {PrismaClient} prisma
    */
-  register(app) {
+  async register(app, prisma) {
     for (const route of AppRoutes) {
       app.use(route.path, route.router)
     }
