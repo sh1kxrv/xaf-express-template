@@ -1,2 +1,3 @@
-# xaf-express-template (NOT READY)
+# xaf-express-template
+
 Express Server Template
