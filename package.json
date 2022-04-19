@@ -10,6 +10,8 @@
   "scripts": {
     "dev": "nodemon src/index.js",
     "prod": "node src/index.js",
+    "migration:dev": "npx prisma migrate dev",
+    "migration:reset": "npx prisma migrate reset",
     "prepare": "husky install"
   },
   "devDependencies": {
