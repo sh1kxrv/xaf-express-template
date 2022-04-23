@@ -18,8 +18,8 @@ class Server extends ModuleExtensions {
    */
   start() {
     this.load(this.app, this.prisma)
-    this.app.listen(config.PORT, () => {
-      successfully(`Started up on port: ${config.PORT}`)
+    this.app.listen(this.port, () => {
+      successfully(`Started up on port: ${this.port}`)
     })
   }
 }

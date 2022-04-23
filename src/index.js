@@ -10,4 +10,4 @@ function bootstrap() {
   server.use(...modules).start()
 }
 
-;async () => bootstrap()
+;(async () => bootstrap())()
